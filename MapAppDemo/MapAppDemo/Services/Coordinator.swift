@@ -19,7 +19,6 @@ final class Coordinator: NSObject, MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
         
-        // FIXME: check if location error occurs in this guard statement
         guard let viewFirst = views.first
             , let annotation = viewFirst.annotation
             , annotation is MKUserLocation else {
